@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {environment} from '../environments/environment';
+import { environment } from '../environments/environment';
+import {FormsModule} from '@angular/forms';
 
 //angular fire imports
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -26,13 +27,14 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 
 //service imports
 
-import {ClientService} from './services/client.service'
+import { ClientService } from './services/client.service'
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'add-client', component: AddClientComponent }
 ];
 
 @NgModule({
@@ -52,6 +54,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(appRoutes)
   ],
