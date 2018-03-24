@@ -1,0 +1,18 @@
+{
+	"clients": {
+		"a": {
+			"balance": "100.00",
+			"email": "sandrapati.anilkumar@gmail.com",
+			"firstName": "Anilkumar",
+			"lastName": "Sandrapati",
+			"phone": "9703080696"
+		},
+		"b": {
+			"balance": "200.00",
+			"email": "test@gmail.com",
+			"firstName": "Test",
+			"lastName": "App",
+			"phone": "9876543210"
+		}
+	}
+}
