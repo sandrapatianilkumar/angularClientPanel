@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import {FormsModule} from '@angular/forms';
+import {FlashMessagesModule} from 'angular2-flash-messages';
 
 //angular fire imports
 import { AngularFireModule } from 'angularfire2';
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    FlashMessagesModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(appRoutes)
   ],
