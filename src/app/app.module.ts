@@ -30,6 +30,7 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 
 import { ClientService } from './services/client.service'
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
     AngularFireAuth,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ClientService
+    ClientService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
