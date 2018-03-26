@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Component({selector: 'app-navbar', templateUrl: './navbar.component.html', styleUrls: ['./navbar.component.scss']})
 export class NavbarComponent implements OnInit {
 
-  isLogggedIn : boolean;
+  isLoggedIn : boolean;
   loggedInUser : string;
   showRegister : boolean;
 
@@ -20,10 +20,10 @@ export class NavbarComponent implements OnInit {
       .getAuth()
       .subscribe(auth => {
         if (auth) {
-          this.isLogggedIn = true;
+          this.isLoggedIn = true;
           this.loggedInUser = auth.email;
         } else {
-          this.isLogggedIn = false;
+          this.isLoggedIn = false;
         }
       })
   }
